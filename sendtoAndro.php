@@ -18,7 +18,7 @@ $headers = array(
 curl_setopt_array($ch, array(
     CURLOPT_URL => 'https://fcm.googleapis.com/fcm/send',
     CURLOPT_HTTPHEADER => $headers,
-    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYPEER => false,
     CURLOPT_POST => true,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_POSTFIELDS => $json
