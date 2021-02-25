@@ -12,6 +12,6 @@
       "type": "image/png"
     }],
   "start_url": "./?utm_source=homescreen",
-  "display": "fullscreen",
+  "display": "standalone",
   "gcm_sender_id": "103953800507"
 }
