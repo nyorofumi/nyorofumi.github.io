@@ -16,7 +16,7 @@ function sendNotification(){
 	};
 	
 	var target = document.getElementById("nyoro"); 
-	target.innerHTML = to;
+	target.innerText = to;
 	
 	fetch('https://fcm.googleapis.com/fcm/send', {
 	  'method': 'POST',
