@@ -9,14 +9,16 @@ function sendNotification(){
 	//var to = 'cgs5xST2Gpo:APA91bGwaeVRPf1uFzG1qjqtCdS-f0OeufbIXilogvG7tdsorTjTWCn1rlucUkKJiW_TqE7OfWImRsJ7FLC-ZWn0lSvtACqleEI_iZoMt2BLpg1jHTLwecLX5IgJDX-fBnbORoqzLmrK';
 
 	var notification = {
-	  'title': 'Portugal vs. Denmark',
-	  'body': '5 to 1',
+	  'title': '通知',
+	  'body': 'あなたは三日間ログインしていません',
 	  'icon': 'firebase-logo.png',
 	  'click_action': 'https://nyorofumi.github.io/'
 	};
 	
-	var target = document.getElementById("nyoro"); 
-	target.innerText = to;
+	//var target = document.getElementById("nyoro"); 
+	//target.innerText = to;
+	
+	console.log(to);
 	
 	fetch('https://fcm.googleapis.com/fcm/send', {
 	  'method': 'POST',
@@ -28,7 +30,7 @@ function sendNotification(){
 		'notification': notification,
 		'to': to
 	  })
-	}).then(function(response) 
+	}).then(function(response) {
 	  console.log(response);
 	}).catch(function(error) {
 	  console.error(error);
